@@ -12,7 +12,8 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={inter.className}>
+      <body className={`${inter.className} bg-gray-50 min-h-screen`}>
+
   <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
     
     <header className="flex items-center justify-between p-4 shadow-md bg-white sticky top-0 z-50">
