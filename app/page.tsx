@@ -72,7 +72,7 @@ export default function Home() {
           .map((profile, index) => (
             <motion.div
   key={index}
-  className="p-4 border rounded-lg shadow cursor-pointer hover:shadow-lg hover:-translate-y-2 transition-all"
+  className="p-4 border rounded-lg shadow cursor-pointer hover:shadow-lg hover:-translate-y-2 transition-all flex flex-col justify-between h-56"
   initial={{ opacity: 0, y: 20 }}
   animate={{ opacity: 1, y: 0 }}
   transition={{ duration: 0.5, delay: index * 0.1 }}
