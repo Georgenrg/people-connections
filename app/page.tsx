@@ -78,7 +78,7 @@ export default function Home() {
   transition={{ duration: 0.5, delay: index * 0.1 }}
 >
             >
-              <h2 className="text-xl font-semibold mb-2">{profile.name}</h2>
+              <h2 className="text-xl font-semibold mb-2 truncate">{profile.name}</h2>
               <p>{profile.profession}</p>
               <p className="text-gray-500">{profile.city}</p>
               <div className="flex space-x-4 mt-4">
