@@ -118,3 +118,36 @@ export default function AddProfilePage() {
           onChange={handleChange}
           className="w-full p-2 border rounded"
         />
+<div className="flex flex-col space-y-2">
+          <label className="font-semibold">Account Type</label>
+          <select
+            name="accountType"
+            value={form.accountType}
+            onChange={handleChange}
+            className="w-full p-2 border rounded"
+          >
+            <option value="profile">Profile (Free)</option>
+            <option value="vip">VIP Profile (30€/мес или 70€/3мес)</option>
+          </select>
+        </div>
+        <div className="flex flex-col space-y-2">
+          <label className="font-semibold">Promo Code (Optional)</label>
+          <input
+            type="text"
+            name="promo"
+            placeholder="Enter Promo Code"
+            value={form.promo}
+            onChange={handleChange}
+            className="w-full p-2 border rounded"
+          />
+        </div>
+        <button
+          type="submit"
+          className="w-full bg-blue-500 hover:bg-blue-600 text-white p-2 rounded font-bold mt-4"
+        >
+          Save Profile
+        </button>
+      </form>
+    </div>
+  );
+}
