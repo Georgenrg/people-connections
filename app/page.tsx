@@ -66,7 +66,7 @@ export default function Home() {
         </button>
       </Link>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl mt-8">
+      className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4 bg-white rounded-xl shadow-lg w-full max-w-6xl mt-8"
         {profiles
           .filter((profile) => filter === "Все" || profile.category === filter)
           .map((profile, index) => (
