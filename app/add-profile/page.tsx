@@ -60,3 +60,61 @@ export default function AddProfilePage() {
           rows={4}
           maxLength={500}
         />
+<div className="flex space-x-2">
+          <input
+            type="text"
+            name="service"
+            placeholder="Service"
+            value={form.service}
+            onChange={handleChange}
+            className="w-1/2 p-2 border rounded"
+          />
+          <input
+            type="text"
+            name="price"
+            placeholder="Price (€)"
+            value={form.price}
+            onChange={handleChange}
+            className="w-1/2 p-2 border rounded"
+          />
+        </div>
+        <input
+          type="text"
+          name="city"
+          placeholder="City/Country"
+          value={form.city}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+        />
+        <input
+          type="text"
+          name="language"
+          placeholder="Languages"
+          value={form.language}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+        />
+        <input
+          type="email"
+          name="email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+        />
+        <input
+          type="text"
+          name="phone"
+          placeholder="Phone / Telegram / WhatsApp"
+          value={form.phone}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+        />
+        <input
+          type="text"
+          name="social"
+          placeholder="Website / Instagram (optional)"
+          value={form.social}
+          onChange={handleChange}
+          className="w-full p-2 border rounded"
+        />
