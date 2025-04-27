@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   <nav className="flex gap-6 text-gray-600 text-sm">
   <a href="/" className="hover:text-black transition-colors duration-300">Все</a>
   <a href="/#categories" className="hover:text-black transition-colors duration-300">Категории</a>
-  <a href="/#add-profile" className="hover:text-black transition-colors duration-300">Добавить профиль</a>
+  <a href="/add-profile" className="hover:text-black transition-colors duration-300">Добавить профиль</a>
 </nav>
 <section className="flex flex-col items-center justify-center text-center py-12 px-4">
   <h1 className="text-4xl font-bold mb-4">Люди. Связи. Доверие.</h1>
