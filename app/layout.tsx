@@ -25,6 +25,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   <a href="/#categories" className="hover:text-black transition-colors duration-300">Категории</a>
   <a href="/#add-profile" className="hover:text-black transition-colors duration-300">Добавить профиль</a>
 </nav>
+<section className="flex flex-col items-center justify-center text-center py-12 px-4">
+  <h1 className="text-4xl font-bold mb-4">Люди. Связи. Доверие.</h1>
+  <p className="text-lg text-gray-600 max-w-2xl">
+    Добро пожаловать на People Connections — место для профессионалов и знакомств.
+  </p>
+</section>
 
 </header>
 
