@@ -16,7 +16,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
   <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
     
-    <header className="flex items-center justify-between p-4 shadow-md bg-white sticky top-0 z-50">
+    <header className="flex items-center justify-between p-4 shadow-md bg-white sticky top-0 z-50 border-b">
   <div className="text-2xl font-bold text-gray-800">
     People Connections
   </div>
