@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { Instagram, Phone } from "lucide-react";
-import ProfileCard from "./components/ProfileCard";
+import ProfileCard from "@/components/ProfileCard";
 
 export default function Home() {
   const [filter, setFilter] = useState("Все");
@@ -36,50 +36,37 @@ export default function Home() {
       whatsapp: "https://wa.me/35796504254",
     },
   ];
-<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
-  {profiles.map((profile, index) => (
-    <ProfileCard
-      key={index}
-      name={profile.name}
-      profession={profile.profession}
-      city={profile.city}
-      instagram={profile.instagram}
-      whatsapp={profile.whatsapp}
-    />
-  ))}
-</div>
 
   return (
-  <main className="flex flex-col items-center justify-center min-h-screen p-4">
-    <h1 className="text-4xl font-bold mb-4 text-center">
-      Люди. Связи. Доверие.
-    </h1>
-    <p className="text-center mb-8">
-      Добро пожаловать на People Connections — место для профессионалов и знакомств.
-    </p>
+    <main className="flex flex-col items-center justify-center min-h-screen p-4">
+      <h1 className="text-4xl font-bold mb-4 text-center">
+        Люди. Связи. Доверие.
+      </h1>
+      <p className="text-center mb-8">
+        Добро пожаловать на People Connections — место для профессионалов и знакомств.
+      </p>
 
-    <div className="flex flex-wrap gap-2 mb-8">
-      {["Все", "Парикмахер", "Йога", "Психолог", "Массажист", "Строительство", "Яхты"].map((category) => (
-        <button
-          key={category}
-          className={`px-4 py-2 rounded-full border ${
-            filter === category ? "bg-black text-white" : "bg-white text-black"
-          }`}
-          onClick={() => setFilter(category)}
-        >
-          {category}
-        </button>
-      ))}
-    </div>
-  </main>
-);
-
+      <div className="flex flex-wrap gap-2 mb-8">
+        {["Все", "Парикмахер", "Йога", "Психолог", "Массажист", "Строительство", "Яхты"].map((category) => (
+          <button
+            key={category}
+            className={`px-4 py-2 rounded-full border ${
+              filter === category ? "bg-black text-white" : "bg-white text-black"
+            }`}
+            onClick={() => setFilter(category)}
+          >
+            {category}
+          </button>
         ))}
-        <Link href="/add-profile">
-          <button className="px-4 py-2 rounded-full bg-green-500 text-white">+ Добавить профиль</button>
-        </Link>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 w-full max-w-5xl">
+
+      <Link href="/#add-profile">
+        <button className="px-4 py-2 rounded-full bg-green-500 text-white">
+          Добавить профиль
+        </button>
+      </Link>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 w-full max-w-5xl mt-8">
         {profiles
           .filter((profile) => filter === "Все" || profile.category === filter)
           .map((profile, index) => (
