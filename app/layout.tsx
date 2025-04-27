@@ -20,11 +20,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   <div className="text-2xl font-bold text-gray-800">
     People Connections
   </div>
-  <nav className="flex gap-6 text-gray-600">
-    <a href="/" className="hover:text-black transition">Все</a>
-    <a href="/#categories" className="hover:text-black transition">Категории</a>
-    <a href="/#add-profile" className="hover:text-black transition">Добавить профиль</a>
-  </nav>
+  <nav className="flex gap-6 text-gray-600 text-sm">
+  <a href="/" className="hover:text-black transition-colors duration-300">Все</a>
+  <a href="/#categories" className="hover:text-black transition-colors duration-300">Категории</a>
+  <a href="/#add-profile" className="hover:text-black transition-colors duration-300">Добавить профиль</a>
+</nav>
+
 </header>
 
 
