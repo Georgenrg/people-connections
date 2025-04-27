@@ -71,9 +71,12 @@ export default function Home() {
           .filter((profile) => filter === "Все" || profile.category === filter)
           .map((profile, index) => (
             <motion.div
-              key={index}
-              className="p-4 border rounded-lg shadow"
-              whileHover={{ scale: 1.05 }}
+  key={index}
+  className="p-4 border rounded-lg shadow"
+  initial={{ opacity: 0, y: 20 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ duration: 0.5, delay: index * 0.1 }}
+>
             >
               <h2 className="text-xl font-semibold mb-2">{profile.name}</h2>
               <p>{profile.profession}</p>
